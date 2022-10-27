@@ -1,0 +1,2 @@
+(** @canonical Andboolexpr.Boolexp *)
+module Boolexp = Andboolexpr__Boolexp

@@ -1,0 +1,138 @@
+# dune test
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /home/studente/Desktop/lip_projects/pr1/boolexpr
+# Auto-detected concurrency: 1
+$ /home/studente/.opam/lip/bin/ocamlc.opt -config > /tmp/dune_11af87_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/studente/.opam/lip/lib/toplevel"
+#  ; ocaml_bin = External "/home/studente/.opam/lip/bin"
+#  ; ocaml = Ok External "/home/studente/.opam/lip/bin/ocaml"
+#  ; ocamlc = External "/home/studente/.opam/lip/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/studente/.opam/lip/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/studente/.opam/lip/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/studente/.opam/lip/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/studente/.opam/lip/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/studente/.opam/lip/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/home/studente/Desktop/lip_projects/pr1/boolexpr"
+#        ; "INSIDE_DUNE" :
+#            "/home/studente/Desktop/lip_projects/pr1/boolexpr/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/studente/Desktop/lip_projects/pr1/boolexpr/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/studente/Desktop/lip_projects/pr1/boolexpr/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/studente/Desktop/lip_projects/pr1/boolexpr/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/home/studente/.opam/lip/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.14.0"
+#      ; standard_library_default = "/home/studente/.opam/lip/lib/ocaml"
+#      ; standard_library = "/home/studente/.opam/lip/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X031"
+#      ; cmi_magic_number = "Caml1999I031"
+#      ; cmo_magic_number = "Caml1999O031"
+#      ; cma_magic_number = "Caml1999A031"
+#      ; cmx_magic_number = "Caml1999Y031"
+#      ; cmxa_magic_number = "Caml1999Z031"
+#      ; ast_impl_magic_number = "Caml1999M031"
+#      ; ast_intf_magic_number = "Caml1999N031"
+#      ; cmxs_magic_number = "Caml1999D031"
+#      ; cmt_magic_number = "Caml1999T031"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/.sandbox/bd3adc5e8899888a478fa22c3124f68c/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="andboolexpr"' -o test/boolexp.pp.ml --impl test/boolexp.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/studente/.opam/lip/bin/ocamldep.opt -modules -impl test/boolexp.pp.ml) > _build/default/test/.andboolexpr.objs/boolexp.pp.ml.d
+$ (cd _build/default && /home/studente/.opam/lip/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/.andboolexpr.objs/byte -I /home/studente/.opam/lip/lib/base -I /home/studente/.opam/lip/lib/base/base_internalhash_types -I /home/studente/.opam/lip/lib/base/caml -I /home/studente/.opam/lip/lib/base/shadow_stdlib -I /home/studente/.opam/lip/lib/jane-street-headers -I /home/studente/.opam/lip/lib/ppx_compare/runtime-lib -I /home/studente/.opam/lip/lib/ppx_enumerate/runtime-lib -I /home/studente/.opam/lip/lib/ppx_hash/runtime-lib -I /home/studente/.opam/lip/lib/ppx_inline_test/config -I /home/studente/.opam/lip/lib/ppx_inline_test/runtime-lib -I /home/studente/.opam/lip/lib/ppx_sexp_conv/runtime-lib -I /home/studente/.opam/lip/lib/sexplib0 -I /home/studente/.opam/lip/lib/time_now -I src/.boolexprLib.objs/byte -no-alias-deps -opaque -open Andboolexpr -o test/.andboolexpr.objs/byte/andboolexpr__Boolexp.cmo -c -impl test/boolexp.pp.ml)
+$ (cd _build/default && /home/studente/.opam/lip/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.andboolexpr.objs/byte -I test/.andboolexpr.objs/native -I /home/studente/.opam/lip/lib/base -I /home/studente/.opam/lip/lib/base/base_internalhash_types -I /home/studente/.opam/lip/lib/base/caml -I /home/studente/.opam/lip/lib/base/shadow_stdlib -I /home/studente/.opam/lip/lib/jane-street-headers -I /home/studente/.opam/lip/lib/ppx_compare/runtime-lib -I /home/studente/.opam/lip/lib/ppx_enumerate/runtime-lib -I /home/studente/.opam/lip/lib/ppx_hash/runtime-lib -I /home/studente/.opam/lip/lib/ppx_inline_test/config -I /home/studente/.opam/lip/lib/ppx_inline_test/runtime-lib -I /home/studente/.opam/lip/lib/ppx_sexp_conv/runtime-lib -I /home/studente/.opam/lip/lib/sexplib0 -I /home/studente/.opam/lip/lib/time_now -I src/.boolexprLib.objs/byte -I src/.boolexprLib.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Andboolexpr -o test/.andboolexpr.objs/native/andboolexpr__Boolexp.cmx -c -impl test/boolexp.pp.ml)
+$ (cd _build/default && /home/studente/.opam/lip/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -g -bin-annot -I test/.andboolexpr.inline-tests/.andboolexpr.inline-tests.eobjs/byte -I /home/studente/.opam/lip/lib/base -I /home/studente/.opam/lip/lib/base/base_internalhash_types -I /home/studente/.opam/lip/lib/base/caml -I /home/studente/.opam/lip/lib/base/shadow_stdlib -I /home/studente/.opam/lip/lib/jane-street-headers -I /home/studente/.opam/lip/lib/ppx_compare/runtime-lib -I /home/studente/.opam/lip/lib/ppx_enumerate/runtime-lib -I /home/studente/.opam/lip/lib/ppx_hash/runtime-lib -I /home/studente/.opam/lip/lib/ppx_inline_test/config -I /home/studente/.opam/lip/lib/ppx_inline_test/runner/lib -I /home/studente/.opam/lip/lib/ppx_inline_test/runtime-lib -I /home/studente/.opam/lip/lib/ppx_sexp_conv/runtime-lib -I /home/studente/.opam/lip/lib/sexplib0 -I /home/studente/.opam/lip/lib/time_now -I src/.boolexprLib.objs/byte -I test/.andboolexpr.objs/byte -no-alias-deps -o test/.andboolexpr.inline-tests/.andboolexpr.inline-tests.eobjs/byte/dune__exe__Inline_test_runner_andboolexpr.cmo -c -impl test/.andboolexpr.inline-tests/inline_test_runner_andboolexpr.ml-gen)
+$ (cd _build/default && /home/studente/.opam/lip/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o test/andboolexpr.cmxa test/.andboolexpr.objs/native/andboolexpr.cmx test/.andboolexpr.objs/native/andboolexpr__Boolexp.cmx)
+$ (cd _build/default && /home/studente/.opam/lip/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -g -I test/.andboolexpr.inline-tests/.andboolexpr.inline-tests.eobjs/byte -I test/.andboolexpr.inline-tests/.andboolexpr.inline-tests.eobjs/native -I /home/studente/.opam/lip/lib/base -I /home/studente/.opam/lip/lib/base/base_internalhash_types -I /home/studente/.opam/lip/lib/base/caml -I /home/studente/.opam/lip/lib/base/shadow_stdlib -I /home/studente/.opam/lip/lib/jane-street-headers -I /home/studente/.opam/lip/lib/ppx_compare/runtime-lib -I /home/studente/.opam/lip/lib/ppx_enumerate/runtime-lib -I /home/studente/.opam/lip/lib/ppx_hash/runtime-lib -I /home/studente/.opam/lip/lib/ppx_inline_test/config -I /home/studente/.opam/lip/lib/ppx_inline_test/runner/lib -I /home/studente/.opam/lip/lib/ppx_inline_test/runtime-lib -I /home/studente/.opam/lip/lib/ppx_sexp_conv/runtime-lib -I /home/studente/.opam/lip/lib/sexplib0 -I /home/studente/.opam/lip/lib/time_now -I src/.boolexprLib.objs/byte -I src/.boolexprLib.objs/native -I test/.andboolexpr.objs/byte -I test/.andboolexpr.objs/native -intf-suffix .ml-gen -no-alias-deps -o test/.andboolexpr.inline-tests/.andboolexpr.inline-tests.eobjs/native/dune__exe__Inline_test_runner_andboolexpr.cmx -c -impl test/.andboolexpr.inline-tests/inline_test_runner_andboolexpr.ml-gen)
+$ (cd _build/default && /home/studente/.opam/lip/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -g -o test/.andboolexpr.inline-tests/inline_test_runner_andboolexpr.exe src/boolexprLib.cmxa /home/studente/.opam/lip/lib/ppx_inline_test/config/inline_test_config.cmxa /home/studente/.opam/lip/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /home/studente/.opam/lip/lib/base/base_internalhash_types /home/studente/.opam/lip/lib/base/caml/caml.cmxa /home/studente/.opam/lip/lib/sexplib0/sexplib0.cmxa /home/studente/.opam/lip/lib/base/shadow_stdlib/shadow_stdlib.cmxa /home/studente/.opam/lip/lib/base/base.cmxa -I /home/studente/.opam/lip/lib/base /home/studente/.opam/lip/lib/jane-street-headers/jane_street_headers.cmxa /home/studente/.opam/lip/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmxa /home/studente/.opam/lip/lib/ppx_compare/runtime-lib/ppx_compare_lib.cmxa /home/studente/.opam/lip/lib/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmxa /home/studente/.opam/lip/lib/ppx_hash/runtime-lib/ppx_hash_lib.cmxa /home/studente/.opam/lip/lib/time_now/time_now.cmxa -I /home/studente/.opam/lip/lib/time_now /home/studente/.opam/lip/lib/ppx_inline_test/runtime-lib/ppx_inline_test_lib.cmxa test/andboolexpr.cmxa /home/studente/.opam/lip/lib/ppx_inline_test/runner/lib/ppx_inline_test_runner_lib.cmxa -I /home/studente/.opam/lip/lib/ppx_inline_test/runner/lib test/.andboolexpr.inline-tests/.andboolexpr.inline-tests.eobjs/native/dune__exe__Inline_test_runner_andboolexpr.cmx -linkall)
+$ (cd _build/default/test && .andboolexpr.inline-tests/inline_test_runner_andboolexpr.exe inline-test-runner andboolexpr -source-tree-root .. -diff-cmd -)
+> false => false [OK]
+> if true then false else true => false [OK]
+> if true then (if true then false else true) else (if true then true else false) => false [OK]
+> if (if false then false else false) then (if false then true else false) else (if true then false else true) => false [OK]
+> if (if (if false then false else false) then (if false then true else false) else (if true then false else true)) then (if false then true else false) else (if true then false else true) => false [OK]
+> not true or true => true [NO]
+> not true and false => false [NO]
+> false and false or true => true [NO]
+> true or false and false => true [OK]
+> if true then true else false and false => true [OK]
+> if true then false else false or true => false [OK]
+> File "test/boolexp.ml", line 17, characters 0-287: <<List.fold_left   (fun b ->      fun (s, v) ->[...]>> is false.
+>
+> FAILED 1 / 1 tests
+[2]
