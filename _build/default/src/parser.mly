@@ -16,6 +16,11 @@ open Ast
 
 %start <boolExpr> prog
 
+%nonassoc ELSE
+%left OR
+%left AND
+%left NOT
+
 %%
 
 prog:
